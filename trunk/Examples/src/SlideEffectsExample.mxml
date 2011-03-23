@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- Simple example to demonstrate the Slide effects. -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:effects="com.iwobanas.effects.*"
+	viewSourceURL="srcview/index.html">
+	
+    <effects:SlideDown id="slideDown" />
+    <effects:SlideUp id="slideUp" />
+    <effects:SlideRight id="slideRight" />
+    <effects:SlideLeft id="slideLeft" />
+
+    <mx:Panel title="Slide effects" width="95%" height="95%" 
+        paddingTop="5" paddingLeft="10" paddingRight="10" paddingBottom="5"
+        layout="horizontal">
+        <mx:VBox>
+        	<mx:Button id="rlButton" label="Right/Left" toggle="true" />
+        	<mx:Image source="@Embed(source='assets/Nokia_6630.png')" 
+            	visible="{rlButton.selected}"
+            	hideEffect="{slideLeft}" showEffect="{slideRight}"/>
+        </mx:VBox>
+        <mx:VBox>
+        	<mx:Button id="duButton" label="Down/Up" toggle="true"  />
+        	<mx:Image source="@Embed(source='assets/Nokia_6630.png')" 
+            	visible="{duButton.selected}"
+            	hideEffect="{slideUp}" showEffect="{slideDown}"/>
+        </mx:VBox>
+    </mx:Panel>
+</mx:Application>
