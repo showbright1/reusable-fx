@@ -1,0 +1,893 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="ChartScroller,com.iwobanas.charts.ChartScroller,chartMouseEnabled,commitTimer,dragStartDataPoint,hAxis,horizontalScrollEnabled,horizontalZoomEnabled,isDragging,series,vAxis,verticalScrollEnabled,verticalZoomEnabled,zoomSpeed,chart,isInitialized,valueCommitDeley,chartMouseDownHandler,chartMouseWheelHandler,commitTimerCompleteHandler,deactivateHandler,endDrag,getSeriesForAxes,globalToData,initializeForAxisRenderer,initializeForChartAxes,initializeForMouseEvent,initializeForSeries,mouseMoveHandler,mouseUpHandler,processChange,scrollChart,zoomChart" name="keywords">
+<title>com.iwobanas.charts.ChartScroller</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'ChartScroller - ReusableFx components documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ReusableFx components documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/iwobanas/charts/ChartScroller.html&amp;com/iwobanas/charts/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;ChartScroller</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class ChartScroller"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.iwobanas.charts</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ChartScroller</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ChartScroller <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  The ChartScroller class adds scrolling and zooming functionality to CartesianChart.
+  
+  <p>To scroll the chart user have to drag data series or axis renderer and move mouse.
+  To zoom data (change scale) user should use mouse wheel over series or axis renderer.
+  If <code>chartMouseEnabled</code> is set user can drag or use mouse wheel 
+  over any part of the chart.</p>
+  
+  <p>Both scrolling and zooming are done by modifying <code>minimum</code> 
+  and <code>maximum</code> properties of chart axes. 
+  Currently LinearAxis and DateTimeAxis are supported.</p>
+  
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#chart">chart</a> : CartesianChart<div class="summaryTableDescription">
+   Chart which content should be scrolled/zoomed.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#chartMouseEnabled">chartMouseEnabled</a> : Boolean = true<div class="summaryTableDescription">
+   If <code>true</code> whole area of the char can be dragged to scroll the chart along default axes 
+   and spinning mouse wheel over any part of the char causes zooming along default axes.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#horizontalScrollEnabled">horizontalScrollEnabled</a> : Boolean = true<div class="summaryTableDescription">
+   Specifies whether chart should be scrolled horizontally.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#horizontalZoomEnabled">horizontalZoomEnabled</a> : Boolean = true<div class="summaryTableDescription">
+   Specifies whether chart should be zoomed along horizontal axis when mouse wheel is supn.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#valueCommitDeley">valueCommitDeley</a> : Number<div class="summaryTableDescription">
+   Time after which valueCommit event is dispatched when users stops scrolling/zooming the chart.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#verticalScrollEnabled">verticalScrollEnabled</a> : Boolean = false<div class="summaryTableDescription">
+   Specifies whether chart should be scrolled vertically.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#verticalZoomEnabled">verticalZoomEnabled</a> : Boolean = false<div class="summaryTableDescription">
+   Specifies whether chart should be zoomed along vertical axis when mouse wheel is supn.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#zoomSpeed">zoomSpeed</a> : Number = 1<div class="summaryTableDescription">
+   Speed of zooming the chart.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#commitTimer">commitTimer</a> : Timer<div class="summaryTableDescription">
+   Timer responsible for deleying valueCommit event.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dragStartDataPoint">dragStartDataPoint</a> : Point<div class="summaryTableDescription">
+   Point in data coordinates at which scrolling (drag) is started.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hAxis">hAxis</a> : IAxis<div class="summaryTableDescription">
+   Currently zoomed/scrolled horizontal axis.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isDragging">isDragging</a> : Boolean = false<div class="summaryTableDescription">
+   Indicate if user is dragging the chart.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isInitialized">isInitialized</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Indicate if ChartScroller is initialized i.e.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#series">series</a> : Series<div class="summaryTableDescription">
+   Chart data series used to transform mouse position to data coordinates.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vAxis">vAxis</a> : IAxis<div class="summaryTableDescription">
+   Currently zoomed/scrolled vertical axis.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ChartScroller()">ChartScroller</a>()</div>
+<div class="summaryTableDescription">
+   Constructor.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a><a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#chartMouseDownHandler()">chartMouseDownHandler</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Mouse down on the chart event hadler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#chartMouseWheelHandler()">chartMouseWheelHandler</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Mouse wheel over chart event handler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#commitTimerCompleteHandler()">commitTimerCompleteHandler</a>(event:TimerEvent):void</div>
+<div class="summaryTableDescription">
+   Commit timer complete event handler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deactivateHandler()">deactivateHandler</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+   Deactivate event handler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#endDrag()">endDrag</a>():void</div>
+<div class="summaryTableDescription">
+   End chart scrolling using mouse by romoving mouse event listeners.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSeriesForAxes()">getSeriesForAxes</a>(hAxis:IAxis, vAxis:IAxis):Series</div>
+<div class="summaryTableDescription">
+   Get chart data series which is using specified horizontal and vertical axis.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#globalToData()">globalToData</a>(point:Point):Point</div>
+<div class="summaryTableDescription">
+   Convert point in global (stage) coordinates to data coordinates.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initializeForAxisRenderer()">initializeForAxisRenderer</a>(renderer:IAxisRenderer):void</div>
+<div class="summaryTableDescription">
+   Initialize zooming/scrolling for a given axis renderer.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initializeForChartAxes()">initializeForChartAxes</a>():void</div>
+<div class="summaryTableDescription">
+   Initialize zooming/scrolling for a default axes of the chart.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initializeForMouseEvent()">initializeForMouseEvent</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Initialize zooming/scrolling based on mouse event.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initializeForSeries()">initializeForSeries</a>(s:Series):void</div>
+<div class="summaryTableDescription">
+   Initialize zooming/scrolling for a given series.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#mouseMoveHandler()">mouseMoveHandler</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Mouse move event handler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#mouseUpHandler()">mouseUpHandler</a>(event:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   Mouse up event handler.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#processChange()">processChange</a>():void</div>
+<div class="summaryTableDescription">
+   Dispatch change event and restart commitTimer.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#scrollChart()">scrollChart</a>(dx:Number, dy:Number):void</div>
+<div class="summaryTableDescription">
+   Scroll chart content by specified horizontal and vertical distance.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#zoomChart()">zoomChart</a>(ralativeTo:Point, zoom:Number):void</div>
+<div class="summaryTableDescription">
+   Zoom chart content relative to a given point in data coordinates.</div>
+</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:change">change</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the user scrolls or zooms the chart.</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:valueCommit">valueCommit</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched specified time after user finished zooming or scrolling the chart.</td><td class="summaryTableOwnerCol">ChartScroller</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="chart"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">chart</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>chart:CartesianChart</code>&nbsp;&nbsp;[read-write]<p>
+   Chart which content should be scrolled/zoomed.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get chart():CartesianChart</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set chart(value:CartesianChart):void</code>
+<br>
+</div>
+<a name="chartMouseEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">chartMouseEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var chartMouseEnabled:Boolean = true</code><p>
+   If <code>true</code> whole area of the char can be dragged to scroll the chart along default axes 
+   and spinning mouse wheel over any part of the char causes zooming along default axes.
+   If <code>false</code> only data series and axes support scrolling/zooming.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="commitTimer"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">commitTimer</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var commitTimer:Timer</code><p>
+   Timer responsible for deleying valueCommit event.
+   </p></div>
+<a name="dragStartDataPoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dragStartDataPoint</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var dragStartDataPoint:Point</code><p>
+   Point in data coordinates at which scrolling (drag) is started.
+   </p></div>
+<a name="hAxis"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hAxis</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var hAxis:IAxis</code><p>
+   Currently zoomed/scrolled horizontal axis.
+   </p></div>
+<a name="horizontalScrollEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">horizontalScrollEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var horizontalScrollEnabled:Boolean = true</code><p>
+   Specifies whether chart should be scrolled horizontally.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="horizontalZoomEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">horizontalZoomEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var horizontalZoomEnabled:Boolean = true</code><p>
+   Specifies whether chart should be zoomed along horizontal axis when mouse wheel is supn.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="isDragging"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isDragging</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var isDragging:Boolean = false</code><p>
+   Indicate if user is dragging the chart.
+   </p></div>
+<a name="isInitialized"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isInitialized</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isInitialized:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Indicate if ChartScroller is initialized i.e. has series and at least one axis set.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;protected function get isInitialized():Boolean</code>
+<br>
+</div>
+<a name="series"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">series</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var series:Series</code><p>
+   Chart data series used to transform mouse position to data coordinates.
+   This property is set by initialization methods when users start zooming/scrolling the chart.
+   
+   Although zooming/scrolling affects all series using modified axis 
+   one series is used for coordinates transformation.
+   </p></div>
+<a name="valueCommitDeley"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">valueCommitDeley</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>valueCommitDeley:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Time after which valueCommit event is dispatched when users stops scrolling/zooming the chart.
+   If no scrolling/zooming occurs within <code>valueCommitDeley</code> 
+   we assume that user finished his/her action and dispatch commitValue event.
+   </p><p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get valueCommitDeley():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set valueCommitDeley(value:Number):void</code>
+<br>
+</div>
+<a name="vAxis"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vAxis</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var vAxis:IAxis</code><p>
+   Currently zoomed/scrolled vertical axis.
+   </p></div>
+<a name="verticalScrollEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">verticalScrollEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var verticalScrollEnabled:Boolean = false</code><p>
+   Specifies whether chart should be scrolled vertically.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="verticalZoomEnabled"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">verticalZoomEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var verticalZoomEnabled:Boolean = false</code><p>
+   Specifies whether chart should be zoomed along vertical axis when mouse wheel is supn.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="zoomSpeed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">zoomSpeed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var zoomSpeed:Number = 1</code><p>
+   Speed of zooming the chart.
+   
+   If <code>zoomSpeed</code> is negative zooming in/out occurs when spinning mouse wheel in different direction.
+   </p><p>This property can be used as the source for data binding.</p>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="ChartScroller()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ChartScroller</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function ChartScroller()</code><p>
+   Constructor.
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="chartMouseDownHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">chartMouseDownHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function chartMouseDownHandler(event:MouseEvent):void</code><p>
+   Mouse down on the chart event hadler. 
+   Initialize scrolling using mouse.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="chartMouseWheelHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">chartMouseWheelHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function chartMouseWheelHandler(event:MouseEvent):void</code><p>
+   Mouse wheel over chart event handler.
+   Initialize ChartScroller if needed and zoom chart depending on event.delta
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="commitTimerCompleteHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">commitTimerCompleteHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function commitTimerCompleteHandler(event:TimerEvent):void</code><p>
+   Commit timer complete event handler.
+   Dispatch <code>valueCommit</code> event.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:TimerEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="deactivateHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deactivateHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function deactivateHandler(event:Event):void</code><p>
+   Deactivate event handler.
+   Stop scrolling the chart.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="endDrag()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">endDrag</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function endDrag():void</code><p>
+   End chart scrolling using mouse by romoving mouse event listeners.
+   </p></div>
+<a name="getSeriesForAxes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSeriesForAxes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function getSeriesForAxes(hAxis:IAxis, vAxis:IAxis):Series</code><p>
+   Get chart data series which is using specified horizontal and vertical axis.
+   If passed axis is <code>null</code> it is ignored i.e. returned series can use any axis for this direction.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">hAxis</span>:IAxis</code> &mdash; horizontal axis
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vAxis</span>:IAxis</code> &mdash; vertical axis
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Series</code> &mdash; chart series using passed horizontal and vertical axes
+   </td>
+</tr>
+</table>
+</div>
+<a name="globalToData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">globalToData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function globalToData(point:Point):Point</code><p>
+   Convert point in global (stage) coordinates to data coordinates.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:Point</code> &mdash; point in global (stage) coordinates
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash; point in data coordinates 
+   </td>
+</tr>
+</table>
+</div>
+<a name="initializeForAxisRenderer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initializeForAxisRenderer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initializeForAxisRenderer(renderer:IAxisRenderer):void</code><p>
+   Initialize zooming/scrolling for a given axis renderer.
+   
+   This method assigns values to <code>series</code>, <code>hAxis</code> 
+   and <code>vAxis</code> based on passed axis renderer.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">renderer</span>:IAxisRenderer</code></td>
+</tr>
+</table>
+</div>
+<a name="initializeForChartAxes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initializeForChartAxes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initializeForChartAxes():void</code><p>
+   Initialize zooming/scrolling for a default axes of the chart.
+   
+   This method assigns values to <code>series</code>, <code>hAxis</code> 
+   and <code>vAxis</code> based on <code>horizontalAxis</code> 
+   and <code>verticalAxis</code> chart properties.
+   </p></div>
+<a name="initializeForMouseEvent()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initializeForMouseEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initializeForMouseEvent(event:MouseEvent):void</code><p>
+   Initialize zooming/scrolling based on mouse event.
+   
+   This method assigns values to <code>series</code>, <code>hAxis</code> 
+   and <code>vAxis</code> based on passed mouse event.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="initializeForSeries()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initializeForSeries</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initializeForSeries(s:Series):void</code><p>
+   Initialize zooming/scrolling for a given series.
+   
+   This method assigns values to <code>series</code>, <code>hAxis</code> 
+   and <code>vAxis</code> based on passed series.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">s</span>:Series</code></td>
+</tr>
+</table>
+</div>
+<a name="mouseMoveHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseMoveHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function mouseMoveHandler(event:MouseEvent):void</code><p>
+   Mouse move event handler.
+   
+   Calculate distance in chart data coordinates between the current mouse position 
+   and drag start position and scroll (move) chart by this distance.
+   
+   This event listener is registered on mouse down and unregistered 
+   on mouse up or deactivate.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="mouseUpHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseUpHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function mouseUpHandler(event:MouseEvent):void</code><p>
+   Mouse up event handler.
+   Stop scrolling the chart.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="processChange()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">processChange</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function processChange():void</code><p>
+   Dispatch change event and restart commitTimer.
+   This function should be called after modifying axis minimum/maximum.
+   </p></div>
+<a name="scrollChart()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollChart</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function scrollChart(dx:Number, dy:Number):void</code><p>
+   Scroll chart content by specified horizontal and vertical distance.
+   Scrolling is done by modifying axis minimum and maximum values.
+   </p><p>Note that call to this function takes effect only if ChartScroller 
+   is initialized (i.e. <code>series</code> and at least one of <code>hAxis</code> 
+   and <code>vAxis</code> are set) and scrolling is enabled
+   (horizontalScrollEnabled/verticalScrollEnabled properties are set).</p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dx</span>:Number</code> &mdash; distance to scroll horizontally in data coordinates
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">dy</span>:Number</code> &mdash; distance to scroll vertically in data coordinates
+   </td>
+</tr>
+</table>
+</div>
+<a name="zoomChart()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">zoomChart</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function zoomChart(ralativeTo:Point, zoom:Number):void</code><p>
+   Zoom chart content relative to a given point in data coordinates.
+   </p><p>Note that call to this function takes effect only if ChartScroller 
+   is initialized (i.e. <code>series</code> and at least one of <code>hAxis</code> 
+   and <code>vAxis</code> are set) and zooming is enabled
+   (horizontalZoomEnabled/verticalZoomEnabled properties are set).</p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">ralativeTo</span>:Point</code> &mdash; point in data coordinates
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">zoom</span>:Number</code> &mdash; indicate how much the content should be zoomed, 
+   if this value is greater than 1 content is zoomed in otherways content is zoomed out.
+   </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:change"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">change</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>flash.events.Event</code></a>
+<br>
+<p></p><p>
+  Dispatched when the user scrolls or zooms the chart.
+  
+  </p></div>
+<a name="event:valueCommit"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">valueCommit</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>mx.events.FlexEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched specified time after user finished zooming or scrolling the chart.
+  This event can be used to initiate retrieve data from server because 
+  it is not dispatched as frequently as <code>change</code> event.
+  
+  </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">&copy; 2009 Iwo Banaś - http://www.iwobanas.com</center>
+</div>
+</body>
+</html>
+<!--© 2009 Iwo Banaś - http://www.iwobanas.com-->

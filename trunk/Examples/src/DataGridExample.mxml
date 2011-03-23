@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:controls="com.iwobanas.controls.*" xmlns:local="*"
+	xmlns:dataGridClasses="com.iwobanas.controls.dataGridClasses.*"
+	layout="vertical" viewSourceURL="srcview/index.html">
+	<mx:Script>
+		<![CDATA[
+			import mx.collections.ICollectionView;
+		]]>
+	</mx:Script>
+	
+	<mx:XML id="reed" source="assets/reed2.xml" />
+
+	<mx:Panel title="DateGrid example" width="95%" height="95%" >
+
+		<controls:MDataGrid id="dataGrid" dataProvider="{reed.course}"
+			width="100%" height="100%" verticalScrollPolicy="on">
+			<controls:columns>
+				<dataGridClasses:MDataGridColumn dataField="title" headerText="Title" width="200"
+                	filterEditor="com.iwobanas.controls.dataGridClasses.filterEditors.WildcardFilterEditor" />
+                <dataGridClasses:MDataGridColumn dataField="points" headerText="Points" width="50"
+                	filterEditor="com.iwobanas.controls.dataGridClasses.filterEditors.SliderFilterEditor" />
+                <dataGridClasses:MDataGridColumn dataField="subj" headerText="Subject" width="50"
+                	filterEditor="com.iwobanas.controls.dataGridClasses.filterEditors.MultipleChoiceFilterEditor" />
+                <dataGridClasses:MDataGridColumn dataField="instructor" headerText="Instructor" width="100" />
+            </controls:columns>
+		</controls:MDataGrid>
+
+		<mx:ControlBar>
+			<local:SearchBox target="{dataGrid}" />
+			<mx:Spacer width="100%" />
+			<mx:Label text="{ICollectionView(dataGrid.dataProvider).length} / {dataGrid.originalCollection.length}" />
+		</mx:ControlBar>
+
+	</mx:Panel>
+
+</mx:Application>

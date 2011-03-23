@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" xmlns:charts="com.iwobanas.charts.*">
+
+	<mx:Script>
+		<![CDATA[
+			
+			public function reset():void
+			{
+				axis1.minimum  = NaN;
+				axis1.maximum  = NaN;
+				axis2.minimum  = NaN;
+				axis2.maximum  = NaN;
+				vAxis1.minimum = NaN;
+				vAxis1.maximum = 10;
+				vAxis2.minimum = NaN;
+				vAxis2.maximum = 10;
+				
+				scroller.horizontalScrollEnabled = true;
+				scroller.verticalScrollEnabled   = false;
+				scroller.horizontalZoomEnabled   = true;
+				scroller.verticalZoomEnabled     = false;
+				scroller.chartMouseEnabled       = true;
+				
+				scroller.zoomSpeed        = 1;
+				scroller.valueCommitDeley = 1000;
+				
+				eventLog.text = "";
+			}
+			
+			public function logEvent(event:Event):void
+			{
+				var date:Date = new Date();
+				eventLog.text += event.type + " " + date.toLocaleTimeString() + "\n";
+			}
+		]]>
+	</mx:Script>
+
+	<charts:ChartScroller id="scroller" chart="{chart}" 
+		valueCommit="{logEvent(event)}" />
+	
+	<!-- Sample data provider -->
+	<mx:ArrayCollection id="dp">
+		<mx:Object y1="3" y2="2" date="{new Date(2009,0)}" x="1" />
+		<mx:Object y1="4" y2="2" date="{new Date(2009,1)}" x="2" />
+		<mx:Object y1="5" y2="3" date="{new Date(2009,2)}" x="3" />
+		<mx:Object y1="4" y2="4" date="{new Date(2009,3)}" x="4" />
+		<mx:Object y1="3" y2="3" date="{new Date(2009,4)}" x="5" />
+		<mx:Object y1="3" y2="5" date="{new Date(2009,5)}" x="6" />
+		<mx:Object y1="2" y2="4" date="{new Date(2009,6)}" x="7" />
+		<mx:Object y1="3" y2="5" date="{new Date(2009,7)}" x="8" />
+		<mx:Object y1="4" y2="6" date="{new Date(2009,8)}" x="9" />
+		<mx:Object y1="5" y2="6" date="{new Date(2009,9)}" x="10" />
+		<mx:Object y1="4" y2="7" date="{new Date(2009,10)}" x="11" />
+		<mx:Object y1="4" y2="8" date="{new Date(2009,11)}" x="12"/>
+	</mx:ArrayCollection>
+	
+	<!-- Horizontal axes -->
+	<mx:LinearAxis id="axis1" />
+	<mx:LinearAxis id="axis2" />
+	
+	<!-- Vertical axes -->
+	<mx:LinearAxis id="vAxis1" maximum="10" />
+	<mx:LinearAxis id="vAxis2" maximum="10" />
+	
+	<mx:Panel title="ChartScroller" width="100%" height="100%" layout="horizontal">
+		<mx:Form height="100%">
+			<mx:FormItem label="horizontalScrollEnabled">
+				<mx:CheckBox selected="{scroller.horizontalScrollEnabled}"
+					change="{scroller.horizontalScrollEnabled = event.target.selected}" />
+			</mx:FormItem>
+			<mx:FormItem label="verticalScrollEnabled">
+				<mx:CheckBox selected="{scroller.verticalScrollEnabled}"
+					change="{scroller.verticalScrollEnabled = event.target.selected}" />
+			</mx:FormItem>
+			<mx:FormItem label="horizontalZoomEnabled">
+				<mx:CheckBox selected="{scroller.horizontalZoomEnabled}"
+					change="{scroller.horizontalZoomEnabled = event.target.selected}" />
+			</mx:FormItem>
+			<mx:FormItem label="verticalZoomEnabled">
+				<mx:CheckBox selected="{scroller.verticalZoomEnabled}"
+					change="{scroller.verticalZoomEnabled = event.target.selected}" />
+			</mx:FormItem>
+			<mx:FormItem label="chartMouseEnabled">
+				<mx:CheckBox selected="{scroller.chartMouseEnabled}"
+					change="{scroller.chartMouseEnabled = event.target.selected}" />
+			</mx:FormItem>
+			<mx:FormItem label="zoomSpeed">
+				<mx:HSlider minimum="-5" maximum="5" snapInterval="0.5" value="{scroller.zoomSpeed}"
+					change="{scroller.zoomSpeed = event.target.value}" />
+			</mx:FormItem>
+			<mx:FormItem label="valueCommitDeley">
+				<mx:HSlider minimum="100" maximum="2000" snapInterval="100" value="{scroller.valueCommitDeley}"
+					change="{scroller.valueCommitDeley = event.target.value}" />
+			</mx:FormItem>
+			<mx:Button label="Reset" click="{reset()}" />
+			<mx:TextArea id="eventLog" width="100%" height="100%" />
+		</mx:Form>
+		
+		<mx:ColumnChart id="chart" dataProvider="{dp}" width="100%" height="100%" 
+			gutterLeft="40" gutterRight="40" horizontalAxis="{axis1}" verticalAxis="{vAxis1}" >
+			
+			<mx:series>
+				<mx:ColumnSeries id="series1" xField="x" yField="y2" horizontalAxis="{axis1}" verticalAxis="{vAxis1}" />
+				<mx:ColumnSeries id="series2" xField="x" yField="y1" horizontalAxis="{axis2}" verticalAxis="{vAxis2}" />
+			</mx:series>
+			
+			<mx:horizontalAxisRenderers>
+				<mx:AxisRenderer placement="bottom" axis="{axis1}" />
+				<mx:AxisRenderer placement="top" axis="{axis2}" />
+			</mx:horizontalAxisRenderers>
+			
+			<mx:verticalAxisRenderers>
+				<mx:AxisRenderer placement="left" axis="{vAxis1}" />
+				<mx:AxisRenderer placement="right" axis="{vAxis2}" />
+			</mx:verticalAxisRenderers>
+			
+		</mx:ColumnChart>
+	</mx:Panel>
+</mx:Application>
