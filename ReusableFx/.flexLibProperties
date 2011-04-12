@@ -1,47 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<flexLibProperties version="1">
-<includeClasses>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.MultipleChoiceFilterEditor"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DateChooserFilterEditor"/>
-<classEntry path="com.iwobanas.controls.MDataGrid"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.DropDownFilterHeaderRenderer"/>
-<classEntry path="com.iwobanas.utils.ComponentUtils"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DropDownFilterEditor"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.BoldSearchItemRenderer"/>
-<classEntry path="com.iwobanas.utils.WildcardUtils"/>
-<classEntry path="com.iwobanas.effects.effectClasses.SlideRightInstance"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.SliderFilterEditor"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.IColumnFilterEditor"/>
-<classEntry path="com.iwobanas.charts.NumericAxisHelper"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filters.MultipleChoiceFilter"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filters.WildcardFilter"/>
-<classEntry path="com.iwobanas.effects.effectClasses.SlideLeftInstance"/>
-<classEntry path="com.iwobanas.effects.SlideDown"/>
-<classEntry path="com.iwobanas.effects.SlideRight"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.FilterEditorBase"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.MDataGridEvent"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filters.DateRangeFilter"/>
-<classEntry path="com.iwobanas.effects.SlideUp"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filters.ColumnFilterBase"/>
-<classEntry path="com.iwobanas.effects.effectClasses.SlideInstance"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.MDataGridColumn"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.NumberRangeFilterEditor"/>
-<classEntry path="com.iwobanas.core.ISearchable"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filters.NumberRangeFilter"/>
-<classEntry path="com.iwobanas.effects.SlideLeft"/>
-<classEntry path="com.iwobanas.charts.ChartScroller"/>
-<classEntry path="com.iwobanas.effects.effectClasses.SlideDownInstance"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.WildcardFilterEditor"/>
-<classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DateFieldFilterEditor"/>
-<classEntry path="com.iwobanas.effects.effectClasses.SlideUpInstance"/>
-<classEntry path="com.iwobanas.controls.DataGrid2CSV"/>
-<classEntry path="com.iwobanas.effects.Slide"/>
-<classEntry path="com.iwobanas.charts.ScrollableAxisRenderer"/>
-</includeClasses>
-<includeResources>
-<resourceEntry destPath="assets/icons/filter.png" sourcePath="assets/icons/filter.png"/>
-<resourceEntry destPath="assets/icons/filter_active.png" sourcePath="assets/icons/filter_active.png"/>
-<resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
-</includeResources>
-<namespaceManifests/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="1">
+  <includeClasses>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.MultipleChoiceFilterEditor"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DateChooserFilterEditor"/>
+    <classEntry path="com.iwobanas.controls.MDataGrid"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.DropDownFilterHeaderRenderer"/>
+    <classEntry path="com.iwobanas.utils.ComponentUtils"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DropDownFilterEditor"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.BoldSearchItemRenderer"/>
+    <classEntry path="com.iwobanas.utils.WildcardUtils"/>
+    <classEntry path="com.iwobanas.effects.effectClasses.SlideRightInstance"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.SliderFilterEditor"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.IColumnFilterEditor"/>
+    <classEntry path="com.iwobanas.charts.NumericAxisHelper"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filters.MultipleChoiceFilter"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filters.WildcardFilter"/>
+    <classEntry path="com.iwobanas.effects.effectClasses.SlideLeftInstance"/>
+    <classEntry path="com.iwobanas.effects.SlideDown"/>
+    <classEntry path="com.iwobanas.effects.SlideRight"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.FilterEditorBase"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.MDataGridEvent"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filters.DateRangeFilter"/>
+    <classEntry path="com.iwobanas.effects.SlideUp"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filters.ColumnFilterBase"/>
+    <classEntry path="com.iwobanas.effects.effectClasses.SlideInstance"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.MDataGridColumn"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.NumberRangeFilterEditor"/>
+    <classEntry path="com.iwobanas.core.ISearchable"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filters.NumberRangeFilter"/>
+    <classEntry path="com.iwobanas.effects.SlideLeft"/>
+    <classEntry path="com.iwobanas.charts.ChartScroller"/>
+    <classEntry path="com.iwobanas.effects.effectClasses.SlideDownInstance"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.WildcardFilterEditor"/>
+    <classEntry path="com.iwobanas.controls.dataGridClasses.filterEditors.DateFieldFilterEditor"/>
+    <classEntry path="com.iwobanas.effects.effectClasses.SlideUpInstance"/>
+    <classEntry path="com.iwobanas.controls.DataGrid2CSV"/>
+    <classEntry path="com.iwobanas.effects.Slide"/>
+    <classEntry path="com.iwobanas.charts.ScrollableAxisRenderer"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="assets/icons/filter.png" sourcePath="assets/icons/filter.png"/>
+    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+    <resourceEntry destPath="assets/icons/filter_active.png" sourcePath="assets/icons/filter_active.png"/>
+  </includeResources>
+  <namespaceManifests/>
 </flexLibProperties>
