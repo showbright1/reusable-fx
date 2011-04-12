@@ -12,7 +12,7 @@
 	<mx:Label text="Search:" />
 	<mx:TextInput id="searchInput" 
 		change="{target.find(searchInput.text)}"
-		backgroundColor="{!target.searchString || target.found ? 0xffffff:0xff0000}"
+		color="{!target.searchString || target.found ? 0x000000:0xff0000}"
 		enter="{target.findNext()}"
 		toolTip="Live search"/>
 	<mx:Button id="previousButton" enabled="{target.searchString != null}"
