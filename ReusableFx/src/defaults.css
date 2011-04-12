@@ -1,5 +1,7 @@
-/* CSS file */
-DropDownFilterEditor{
+@namespace mDataGridClasses "com.iwobanas.controls.dataGridClasses.*";
+@namespace filterEditors "com.iwobanas.controls.dataGridClasses.filterEditors.*";
+
+filterEditors|DropDownFilterEditor{
 	border-style:		solid;
 	background-alpha: 	1;
 	background-color:	white;
@@ -10,7 +12,7 @@ DropDownFilterEditor{
 	padding-top:		5;
 }
 
-DropDownFilterHeaderRenderer{
+mDataGridClasses|DropDownFilterHeaderRenderer{
 	padding-bottom:		0;
 	padding-left:		5;
 	padding-right:		0;
@@ -20,6 +22,7 @@ DropDownFilterHeaderRenderer{
 	filter-button-style-name: dataGridFilterButton;
 	filter-button-active-style-name: dataGridFilterButtonActive;
 }
+
 .dataGridFilterButton{
 	padding-bottom:		4;
 	padding-left:		4;
